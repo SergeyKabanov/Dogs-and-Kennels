@@ -1,0 +1,13 @@
+REGEDIT
+; This .REG file may be used by your SETUP program.
+;   If a SETUP program is not available, the entries below will be
+;   registered in your InitInstance automatically with a call to
+;   CWinApp::RegisterShellFileTypes and COleObjectFactory::UpdateRegistryAll.
+
+
+HKEY_CLASSES_ROOT\DOGS_OUTER.Application = DOGS_OUTER Application
+HKEY_CLASSES_ROOT\DOGS_OUTER.Application\CLSID = {85DAC6A3-3662-11D5-AEA3-00A0D2162638}
+
+HKEY_CLASSES_ROOT\CLSID\{85DAC6A3-3662-11D5-AEA3-00A0D2162638} = DOGS_OUTER Application
+HKEY_CLASSES_ROOT\CLSID\{85DAC6A3-3662-11D5-AEA3-00A0D2162638}\ProgId = DOGS_OUTER.Application
+HKEY_CLASSES_ROOT\CLSID\{85DAC6A3-3662-11D5-AEA3-00A0D2162638}\LocalServer32 = DOGS_OUTER.EXE

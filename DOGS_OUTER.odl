@@ -1,0 +1,42 @@
+// DOGS_OUTER.odl : type library source for DOGS_OUTER.exe
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (DOGS_OUTER.tlb).
+
+[ uuid(85DAC6A4-3662-11D5-AEA3-00A0D2162638), version(1.0) ]
+library DOGS_OUTER
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+	//  Primary dispatch interface for CDOGS_OUTERDoc
+	
+	[ uuid(85DAC6A5-3662-11D5-AEA3-00A0D2162638) ]
+	dispinterface IDOGS_OUTER
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDOGS_OUTERDlgAutoProxy)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDOGS_OUTERDlgAutoProxy)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDOGS_OUTERDoc
+	
+	[ uuid(85DAC6A3-3662-11D5-AEA3-00A0D2162638) ]
+	coclass DOGS_OUTER
+	{
+		[default] dispinterface IDOGS_OUTER;
+	};
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};
