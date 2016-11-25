@@ -1,0 +1,69 @@
+// DOGS_INNER.idl : IDL source for DOGS_INNER.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (DOGS_INNER.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(77CCBBE1-3699-11D5-AEA3-00A0D2162638),
+		dual,
+		helpstring("Idog Interface"),
+		pointer_default(unique)
+	]
+	interface Idog : IDispatch
+	{
+		[id(1), helpstring("method Run")] HRESULT Run();
+		[id(2), helpstring("method Bark")] HRESULT Bark([in] LONG nTime);
+		[id(3), helpstring("method Sleep")] HRESULT Sleep([in] LONG nTime);
+		[propget, id(4), helpstring("property Breed")] HRESULT Breed([out, retval] BSTR *pVal);
+		[propput, id(4), helpstring("property Breed")] HRESULT Breed([in] BSTR newVal);
+		[propget, id(5), helpstring("property Name")] HRESULT Name([out, retval] BSTR *pVal);
+		[propput, id(5), helpstring("property Name")] HRESULT Name([in] BSTR newVal);
+		[propget, id(6), helpstring("property HairColor")] HRESULT HairColor([out, retval] BSTR *pVal);
+		[propput, id(6), helpstring("property HairColor")] HRESULT HairColor([in] BSTR newVal);
+	};
+	[
+		object,
+		uuid(F77A0781-369E-11D5-AEA3-00A0D2162638),
+		dual,
+		helpstring("Ikennel Interface"),
+		pointer_default(unique)
+	]
+	interface Ikennel : IDispatch
+	{
+		[id(1), helpstring("method Save")] HRESULT Save([in] BSTR bstrFilename);
+		[id(2), helpstring("method Load")] HRESULT Load([in] BSTR bstrFilename);
+		[id(3), helpstring("method GetCount")] HRESULT GetCount([out,retval] LONG *nNumDogs);
+		[id(4), helpstring("method GetAt")] HRESULT GetAt([in] LONG nIndex, [out,retval] Idog **pDog);
+	};
+
+[
+	uuid(F15261C1-3696-11D5-AEA3-00A0D2162638),
+	version(1.0),
+	helpstring("DOGS_INNER 1.0 Type Library")
+]
+library DOGS_INNERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(77CCBBE2-3699-11D5-AEA3-00A0D2162638),
+		helpstring("dog Class")
+	]
+	coclass dog
+	{
+		[default] interface Idog;
+	};
+	[
+		uuid(F77A0782-369E-11D5-AEA3-00A0D2162638),
+		helpstring("kennel Class")
+	]
+	coclass kennel
+	{
+		[default] interface Ikennel;
+	};
+};

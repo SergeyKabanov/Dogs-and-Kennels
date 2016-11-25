@@ -1,0 +1,26 @@
+HKCR
+{
+	DOGS_INNER.kennel.1 = s 'kennel Class'
+	{
+		CLSID = s '{F77A0782-369E-11D5-AEA3-00A0D2162638}'
+	}
+	DOGS_INNER.kennel = s 'kennel Class'
+	{
+		CLSID = s '{F77A0782-369E-11D5-AEA3-00A0D2162638}'
+		CurVer = s 'DOGS_INNER.kennel.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {F77A0782-369E-11D5-AEA3-00A0D2162638} = s 'kennel Class'
+		{
+			ProgID = s 'DOGS_INNER.kennel.1'
+			VersionIndependentProgID = s 'DOGS_INNER.kennel'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{F15261C1-3696-11D5-AEA3-00A0D2162638}'
+		}
+	}
+}

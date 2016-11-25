@@ -1,0 +1,44 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: DOGS_INNER - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "c:\tmp\RSPC202.TMP" with contents
+[
+/nologo /MDd /W4 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"Debug/DOGS_INNER.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\DOGS_OUTER\DOGS_INNER\dog.cpp"
+"C:\DOGS_OUTER\DOGS_INNER\DOGS_INNER.cpp"
+"C:\DOGS_OUTER\DOGS_INNER\kennel.cpp"
+]
+Creating command line "cl.exe @c:\tmp\RSPC202.TMP" 
+Creating temporary file "c:\tmp\RSPC203.TMP" with contents
+[
+/nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/DOGS_INNER.pdb" /debug /machine:I386 /def:".\DOGS_INNER.def" /out:"Debug/DOGS_INNER.dll" /implib:"Debug/DOGS_INNER.lib" /pdbtype:sept 
+.\Debug\dog.obj
+.\Debug\DOGS_INNER.obj
+.\Debug\kennel.obj
+.\Debug\standard.obj
+.\Debug\StdAfx.obj
+.\Debug\DOGS_INNER.res
+]
+Creating command line "link.exe @c:\tmp\RSPC203.TMP"
+<h3>Output Window</h3>
+Compiling...
+DOGS_INNER.cpp
+kennel.cpp
+Generating Code...
+Skipping... (no relevant changes detected)
+dog.cpp
+Linking...
+   Creating library Debug/DOGS_INNER.lib and object Debug/DOGS_INNER.exp
+
+
+
+<h3>Results</h3>
+DOGS_INNER.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

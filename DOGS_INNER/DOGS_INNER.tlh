@@ -1,0 +1,139 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (f236fe3a).
+//
+// DOGS_INNER.tlh
+//
+// C++ source equivalent of Win32 type library DOGS_INNER.tlb
+// compiler-generated file created 04/22/01 at 14:43:04 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace DOGS_INNERLib {
+
+//
+// Forward references and typedefs
+//
+
+struct /* coclass */ dog;
+struct __declspec(uuid("77ccbbe1-3699-11d5-aea3-00a0d2162638"))
+/* dual interface */ Idog;
+struct /* coclass */ kennel;
+struct __declspec(uuid("f77a0781-369e-11d5-aea3-00a0d2162638"))
+/* dual interface */ Ikennel;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(Idog, __uuidof(Idog));
+_COM_SMARTPTR_TYPEDEF(Ikennel, __uuidof(Ikennel));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("77ccbbe2-3699-11d5-aea3-00a0d2162638"))
+dog;
+    // [ default ] interface Idog
+
+struct __declspec(uuid("77ccbbe1-3699-11d5-aea3-00a0d2162638"))
+Idog : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetBreed,put=PutBreed))
+    _bstr_t Breed;
+    __declspec(property(get=GetName,put=PutName))
+    _bstr_t Name;
+    __declspec(property(get=GetHairColor,put=PutHairColor))
+    _bstr_t HairColor;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Run ( );
+    HRESULT Bark (
+        long nTime );
+    HRESULT Sleep (
+        long nTime );
+    _bstr_t GetBreed ( );
+    void PutBreed (
+        _bstr_t pVal );
+    _bstr_t GetName ( );
+    void PutName (
+        _bstr_t pVal );
+    _bstr_t GetHairColor ( );
+    void PutHairColor (
+        _bstr_t pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_Run ( ) = 0;
+    virtual HRESULT __stdcall raw_Bark (
+        long nTime ) = 0;
+    virtual HRESULT __stdcall raw_Sleep (
+        long nTime ) = 0;
+    virtual HRESULT __stdcall get_Breed (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_Breed (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall get_Name (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_Name (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall get_HairColor (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_HairColor (
+        BSTR pVal ) = 0;
+};
+
+struct __declspec(uuid("f77a0782-369e-11d5-aea3-00a0d2162638"))
+kennel;
+    // [ default ] interface Ikennel
+
+struct __declspec(uuid("f77a0781-369e-11d5-aea3-00a0d2162638"))
+Ikennel : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Save (
+        _bstr_t bstrFilename );
+    HRESULT Load (
+        _bstr_t bstrFilename );
+    long GetCount ( );
+    IdogPtr GetAt (
+        long nIndex );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_Save (
+        BSTR bstrFilename ) = 0;
+    virtual HRESULT __stdcall raw_Load (
+        BSTR bstrFilename ) = 0;
+    virtual HRESULT __stdcall raw_GetCount (
+        long * nNumDogs ) = 0;
+    virtual HRESULT __stdcall raw_GetAt (
+        long nIndex,
+        struct Idog * * pDog ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "DOGS_INNER.tli"
+
+} // namespace DOGS_INNERLib
+
+#pragma pack(pop)
